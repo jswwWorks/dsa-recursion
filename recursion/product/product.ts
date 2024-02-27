@@ -1,3 +1,5 @@
+"use strict";
+
 import { LLNodeNum } from "../common/ll";
 
 /** product: calculate the product of a linked list of numbers. */

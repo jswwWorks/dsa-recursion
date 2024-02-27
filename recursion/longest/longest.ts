@@ -1,9 +1,17 @@
+"use strict";
+
 import { LLNodeStr } from "../common/ll";
 
 /** longest: return length of longest word in a linked list of words. */
 
 function longest(words: LLNodeStr | null): number {
-  return 42;
+  // base case: null => 0
+  // else: max(word.length, longest(rest...))
+
+  if (words === null) return 0;
+
+  return Math.max(words.val.length, longest(words.next));
+
 }
 
 export { longest };

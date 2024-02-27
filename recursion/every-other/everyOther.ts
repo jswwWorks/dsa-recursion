@@ -1,16 +1,15 @@
+"use strict";
+
 /** everyOther: return a string with every other letter. */
 
 function everyOther(str: string): string {
-  return "x";
 
-  // base case: string is empty or hit end of string
+  // base case: string is empty
+  if (str === "") return "";
 
-  // ideally, not mutating original string
-
-  // odd idx-ed chars we include, otherwise not
-  // use concatenation when calling recursively
-
-
+  else {
+    return str[0] + everyOther(str.slice(2));
+  }
 }
 
 export { everyOther };
