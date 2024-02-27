@@ -1,7 +1,7 @@
 import { it, expect } from "vitest";
 import { findIndex } from "./findIndex";
 
-const nums = [1, 2, 3];
+const nums = [1, 2, 3, 2];
 
 it("returns first index", function () {
   expect(findIndex(nums, 1)).toBe(0);
