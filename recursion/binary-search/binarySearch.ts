@@ -3,11 +3,10 @@
 
 function binarySearch(arr: number[], val: number, left = 0, right = arr.length): boolean {
 
-  if ((left === right) || (left === arr.length - 1)) return false;
-
   const idx: number = Math.floor((left + right) / 2);
-
   if (arr[idx] === val) return true;
+
+  if ((left === right) || (left === arr.length - 1)) return false;
 
   else if (arr[idx] > val) {
     return binarySearch(arr, val, left, right = idx);

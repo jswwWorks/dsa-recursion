@@ -7,11 +7,11 @@ function binarySearchIndex(
   left = 0,
   right = arr.length): number {
 
-  if ((left === right) || (left === arr.length - 1)) return -1;
-
   const idx: number = Math.floor((left + right) / 2);
 
   if (arr[idx] === val) return idx;
+
+  if ((left === right) || (left === arr.length - 1)) return -1;
 
   else if (arr[idx] > val) {
     return binarySearchIndex(arr, val, left, right = idx);
